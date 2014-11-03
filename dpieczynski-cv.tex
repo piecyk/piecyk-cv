@@ -1,0 +1,249 @@
+\documentclass[9pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[]{hyperref}
+\hypersetup{
+  colorlinks=true,%
+  citecolor=black,%
+  filecolor=black,%
+  linkcolor=NavyBlue,%
+  urlcolor=NavyBlue,
+  breaklinks=true
+}
+\urlstyle{same}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+\raggedright
+\pagenumbering{arabic}
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+      \setlength{\topsep}{0pt}%
+      \setlength{\leftmargin}{#1}%
+      \setlength{\rightmargin}{#2}%
+      \setlength{\listparindent}{\parindent}%
+      \setlength{\itemindent}{\parindent}%
+      \setlength{\parsep}{\parskip}%
+    }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+  \begin{changemargin}{-0.05in}{-0.05in}
+    \vspace*{-8pt}
+    \hrulefill \\
+    \vspace*{-2pt}
+  \end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[3]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \scshape {#1}}\\ \smallskip
+      {\url{#2}}\\ \smallskip
+      {\href{mailto:#3}{#3}}\\ \smallskip
+		\end{center}
+	\end{changemargin}
+}
+
+\newcommand{\jobtitle}[3]{
+	\textbf{#1}, \emph{#2} \hfill \emph{#3}\\
+}
+
+\newcommand{\jobdescription}[1]{
+	\begin{changemargin}{0.15in}{0.15in}
+    \smallskip
+		{#1}
+    \medskip
+	\end{changemargin}
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }
+	{\end{changemargin}
+}
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\
+	#4\\
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+\contact
+    {Damian Pieczynski}
+    {http://pl.linkedin.com/pub/damian-pieczynki/10/b31/7b7}
+    {damian.pieczynski@gmail.com}
+    {London, United Kingdom}\\
+    {skype : dpieczynski}\\
+    {twitter : @piecu}\\
+    {github: @piecyk}\\
+    {+447754214923, +48725369868}
+    \medskip
+
+\header{Personal Statement}
+\begin{body}
+  \vspace{14pt}
+  I am an experienced, motivated, and reliable software engineer with a passion for creating great products and leading teams,
+  working in a very Agile focused way, practising Scrum, TDD, BDD etc. and any other technology that helps me keep ahead of the game.
+  I am interested in developing Web applications, especially in JavaScript - EcmaScript(5,6) technologies(AngularJS, React, NodeJS).
+  In the nearest future I will focus on functional programming paradigm in Scala, Clojure.
+  Available from january 2015.
+\end{body}
+\medskip
+
+
+\header{Skills}
+\begin{body}
+  \vspace{14pt}
+  \emph{\textbf{Programming:}}{} EcmaScript(5,6), Java, Scala, \LaTeX, HTML/CSS(3.0)\\
+  \medskip
+  \emph{\textbf{Software development process:}}{} Agile, Pair programming, TDD, BDD\\
+  \medskip
+  \emph{\textbf{Interested:}}{} Scala, Clojure, Docker\\
+  \medskip
+  \emph{\textbf{Selected Technologies:}}{} AngularJs, Lo-Dash, NodeJs, jQuery, React, Git, SVN, JUnit, Jasmine, Mocha, GruntJs, Glup, Gradle, Spring, Ruby on Rails, Sass, Less\\
+  \medskip
+  \emph{\textbf{Tools:}}{} Emacs, Jira\\
+  \medskip
+  \emph{\textbf{Databases:}}{} Redis, MySQL, PostgreSQL, MongoDB\\
+  \medskip
+  \emph{\textbf{Os:}}{} Windows; Linux(Arch Linux)\\
+\end{body}
+\medskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+
+\header{Career History}
+\begin{body}
+  \vspace{14pt}
+
+
+  \jobtitle{Orbit Developer}{Capita Employee Benefits}{July 2014 - Present}
+  \jobdescription{
+    As a lead AngularJs Expert i'm working on new front-end SPA application, build automation and CI enviroment for UI part.
+    Creating core reference app for other new projects in company also common ui library.
+    Knowledge sharing sessions, presentations, pair programming.\\
+    \emph{Technologies:} Agile, TDD, EcmaScript(5,6), AngulaJs, Lo-Dash, GruntJs, Sass, NodeJS, Jasmine, Mocha, Selenium webdriver, Java, Spring, Tomcat,  Redis, ActiveMQ, Gradle
+  }
+
+  \jobtitle{Software Engineer, Owner}{Effective Code}{July 2012 - Present}
+  \jobdescription{
+    Working web and hybrid mobile application development\\
+    \emph{Technologies:} Agile, TDD, EcmaScript(5,6), AngulaJs, Cordova, React, Immutable-js, Mori, Gulp, GruntJs, Sass, NodeJS, Mocha, Selenium webdriver, Scala.
+  }
+
+  \jobtitle{Software Engineer}{PGS Software}{July 2012 - June 2014}
+  \jobdescription{
+    \medskip
+
+    \textbf{- Refresh Java web legacy system}{} \hfill \emph{2013-01 - 2014-06}{} \\
+    As a Software Engineer, I was working on new front-end for legacy J2EE project- remove old JSP server compile pages and transfer to new HTML5 client compile UI, main tasks were: development and lead front-end team, unit and e2e testing, architectural decisions and creating documentation.\\
+    \emph{Technologies:} J2EE, Java SE 1.6, Junit, SVN, GIT, Hibernate, EcmaScript5 - JavaScript, AngularJS, NodeJS, GruntJs, Jasmine, UndrescoreJS, Jenkins, Emacs, Agile, TDD.
+    \medskip
+
+    \textbf{- Apartment finder - startup}{} \hfill \emph{2012-07 - 2012-12}{} \\
+    As a Software Engineer, I was working on new features for legacy IN platform, main tasks were: development, unit testing, o-line testing and creating documentation.\\
+    \emph{Technologies:} JEE, Java SE 1.6, Junit, SVN, Spring, Hibernate, PostgreSQL, Postgis, Eclispe, Maven, Jenkins, Agile, TDD, EcmaScript5 -JavaScript, BackboneJS, AngularJS.
+  }
+
+  \jobtitle{Software Engineer - Contract/Remote}{Synergia Pro}{August 2013 - October 2013}{}
+  \jobdescription{
+    As a Java J2EE/ Front End Consultant, I work on a team developing and maintaining web based application, writing code and automated tests( frontend and backend ) for client from USA(Texas).\\
+    \emph{Technologies:} Agile, TDD, Maven, Java 1.6/1.7, Eclipse RAP 2.0, JavaScript, ExtJS, NodeJS, Jasmine, Selenium webdriver.
+  }
+
+  \jobtitle{Software Engineer}{Tieto Poland}{June 2010 - June 2012}
+  \jobdescription{
+    \medskip
+
+    \textbf{- Charge@Once-Intelligent Networks} - Nokia Siemens Network Wroclaw{} \hfill \emph{2012-01 - 2012-06}{} \\
+    My main tasks were: development, unit testing, maintenance and creating documentation of Service Control Points stateful and stateless components. Project was set in the international environment: I collaborated with developers and testers from other countries (Germany, India, etc.).\\
+    \emph{Technologies:} Agile, TDD, Java, JUnit, Spock, ClearCase, Linux, GIT
+    \medskip
+
+    \textbf{- IN (Intelligent Networks) v7.5} - T-mobile Berlin / Tieto Germany{} \hfill \emph{2010-12 - 2011-12}{} \\
+    As a Software Engineer, I was working on new features for legacy IN platform, main tasks were: development, unit testing, o-line testing and creating documentation.\\
+    \emph{Technologies:} Agile, Java SE 1.5, Junit, Clear Case, XML, Flex Logic (NSN), Ruby/Bash
+    \medskip
+
+    \textbf{- Application Server v2.0} - Nokia Siemens Network Wroclaw{} \hfill \emph{2010-06 - 2010-11}{} \\
+    Implementation of Java-based Application Server(platform) for comunication with and managing of underlaying Inteligent Network enviorment. AS is build on top of JAIN SLEE 1.1 standard and its OpenCloud implementation - Rhino platform. My main tasks were: development, unit testing, maintenance and creating documentation.\\
+    \emph{Technologies:} Agile, Java SE 1.6, SVN, Hudson/Sonar, Maven/Ant, CMD/Perl/Bash scripts, XML, Agile.
+  }
+
+\end{body}
+\medskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+
+\begin{body}
+  \vspace{14pt}
+  \textbf{Master of Science degree in Software Engineering}{} \hfill \emph{February 2013}{} \\
+  \emph{Wrocaw University of Technology} Faculty of Computer Science and Management, Poland{} \\
+\end{body}
+
+\medskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Courses
+\header{Courses}
+
+\begin{body}
+  \vspace{14pt}
+  \textbf{Functional Programming Principles in Scala}{} \hfill \emph{September 2014}{} \\
+  \emph{https://www.coursera.org} by Martin Odersky{} \\
+  \medskip
+
+  \textbf{Introduction to Functional Programming}{} \hfill \emph{October 2014}{} \\
+  \emph{https://www.edx.org} by Erik Meijer{} \\
+\end{body}
+
+\medskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\header{Personal}
+
+\begin{body}
+  \vspace{14pt}
+  \textbf{qualifications}{} \hfill {} \\
+  - dynamic, creative person, willing to develop myself and learn new technologies;\hfill {} \\
+  - able to perform both individual and team work;\hfill {} \\
+  - good decision-making abilities; \hfill {} \\
+
+  \medskip
+  \textbf{interest}{} \hfill {} \\
+  - running, triathlon, photography, music, motorization, traveling, new technologies; \hfill {} \\
+\end{body}
+
+\end{document}
